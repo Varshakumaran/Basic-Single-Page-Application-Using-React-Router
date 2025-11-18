@@ -67,13 +67,13 @@ Dashboard → contains Link navbar + nested routes
 npm run dev
 
 🟦 OUTPUT 
-<img width="1919" height="1131" alt="image" src="https://github.com/user-attachments/assets/4d64c44e-d30c-4664-97e2-a8e0307ce7c2" />
+![unnamed](https://github.com/user-attachments/assets/9ad8ac8e-1b53-480f-9a56-50a52c746c9e)
 
-<img width="1917" height="1140" alt="image" src="https://github.com/user-attachments/assets/5fbaad53-f2f3-4f3c-8821-30e26bd52436" />
+![unnamed (1)](https://github.com/user-attachments/assets/8b519974-fa5b-41b3-b945-40e88584a769)
 
-<img width="1919" height="1134" alt="image" src="https://github.com/user-attachments/assets/7e7b461b-cb38-4650-98d1-1753ffb36a53" />
+![unnamed (2)](https://github.com/user-attachments/assets/1ed34dcd-49da-4079-bf62-940fc4399e9d)
 
-<img width="1919" height="1137" alt="image" src="https://github.com/user-attachments/assets/881cab49-9911-4976-9abc-1b031bd92060" />
+![unnamed (3)](https://github.com/user-attachments/assets/2630bedb-a0a2-4cc3-a5fe-a295291b9e2a)
 
 🟦 RESULT
 
