@@ -1,138 +1,93 @@
-# 🚀Basic Single Page Application (SPA) Using React Router
+🔥 React SPA – Aim, Procedure, Output & Result
+🟦 AIM
 
-### This project is a **React-based Single Page Application** featuring:
+To develop a Single Page Application (SPA) using React and React Router that includes a Home page, Login page, and a Dashboard section with nested routes such as Profile, Settings, and Notifications.
+Protected routing must be implemented to ensure only logged-in users can access dashboard pages.
 
-* Home Page
-* Login Page
-* Protected Dashboard
-* Nested Routes (Profile, Settings, Notifications)
-* Clean & Responsive UI
-* Routing using `react-router-dom`
+🟦 SOFTWARE / TECHNOLOGIES USED
 
----
+React
 
-## 📸 **Project Output / Screenshots**
+Vite
 
-### 🏠 Home Page
-<img width="1917" height="911" alt="image" src="https://github.com/user-attachments/assets/c86c5b2a-8e47-4947-85a3-7cba570cf7d3" />
+React Router DOM
 
-### 🔑 Login Page
+JavaScript
 
-<img width="1908" height="916" alt="image" src="https://github.com/user-attachments/assets/c14bb952-be6d-4cf9-8dba-e736f11a38b2" />
+CSS
 
-### 📊 Dashboard
+VS Code
 
-<img width="1885" height="907" alt="image" src="https://github.com/user-attachments/assets/14eb7da0-8025-41be-be7c-72876d579ac4" />
-
-### 👤 Profile Page
-
-<img width="1873" height="892" alt="image" src="https://github.com/user-attachments/assets/0beb4650-5a1b-4169-a28c-9ebc01f02cfc" />
-
-### ⚙️ Settings
-
-<img width="1892" height="895" alt="image" src="https://github.com/user-attachments/assets/0a06a082-8f58-400b-a617-dbd509a13fe3" />
-
-### 🔔 Notifications
-<img width="1915" height="911" alt="image" src="https://github.com/user-attachments/assets/21392a4e-6a2b-458a-9e1e-745758cbef45" />
-
-*(You can replace images with your own screenshots later.)*
-
----
-
-## 📂 Folder Structure
-
-```
-src/
-│
-├── App.jsx
-├── main.jsx
-├── ProtectedRoute.jsx
-├── styles.css
-│
-├── components/
-│   └── Navbar.jsx
-│
-├── pages/
-│   ├── Home.jsx
-│   ├── Login.jsx
-│
-└── dashboard/
-    ├── Dashboard.jsx
-    ├── Profile.jsx
-    ├── Settings.jsx
-    ├── Notifications.jsx
-```
-
----
-
-## 🔧 Technologies Used
-
-* React JS
-* React Router v6
-* JavaScript (ES6)
-* CSS3
-* Vite (Bundler)
-
----
-
-## ✅ Features
-
-### ✔ Single Page Application
-
-The entire website works without reloading the page.
-
-### ✔ Protected Routes
-
-Dashboard pages are only accessible after logging in.
-
-### ✔ Nested Routing
-
-Dashboard contains internal routes for profile, settings, and notifications.
-
-### ✔ Clean UI
-
-Styled with custom CSS (no Tailwind / Bootstrap).
-
----
-
-## ▶️ How to Run This Project
-
-### **1. Install dependencies**
-
-```
+🟦 PROCEDURE
+1. Install Vite React project
+npm create vite@latest react-spa-dashboard
+cd react-spa-dashboard
 npm install
-```
 
-### **2. Start the development server**
+2. Install required packages
+npm install react-router-dom
 
-```
+3. Create folder structure
+
+4. Implement Protected Route
+
+Create a component:
+
+const ProtectedRoute = ({ children }) => {
+  const isLoggedIn = localStorage.getItem("loggedIn") === "true";
+  return isLoggedIn ? children : <Navigate to="/login" />;
+};
+
+5. Create Pages (Home, Login, Dashboard, etc.)
+
+Home page → simple welcome page
+
+Login page → sets localStorage.loggedIn = true
+
+Dashboard → contains Link navbar + nested routes
+
+6. Setup Routing in App.jsx
+<Router>
+  <Routes>
+    <Route path="/" element={<Home />} />
+    <Route path="/login" element={<Login />} />
+
+    <Route 
+      path="/dashboard/*" 
+      element={
+        <ProtectedRoute>
+          <Dashboard />
+        </ProtectedRoute>
+      } 
+    />
+  </Routes>
+</Router>
+
+7. Start the server
 npm run dev
-```
 
-### **3. Open the app**
+🟦 OUTPUT 
+<img width="1919" height="1131" alt="image" src="https://github.com/user-attachments/assets/4d64c44e-d30c-4664-97e2-a8e0307ce7c2" />
 
-```
-http://localhost:5173/
-```
+<img width="1917" height="1140" alt="image" src="https://github.com/user-attachments/assets/5fbaad53-f2f3-4f3c-8821-30e26bd52436" />
 
----
+<img width="1919" height="1134" alt="image" src="https://github.com/user-attachments/assets/7e7b461b-cb38-4650-98d1-1753ffb36a53" />
 
-## 🛠 Build for production
+<img width="1919" height="1137" alt="image" src="https://github.com/user-attachments/assets/881cab49-9911-4976-9abc-1b031bd92060" />
 
-```
-npm run build
-```
+🟦 RESULT
 
----
+A fully functional Single Page Application (SPA) with a protected Dashboard was successfully created using React Router.
+The application demonstrates:
 
-## 📌 GitHub Repository
+client-side routing
 
-Link: *(add your repository link here)*
-Example:
+nested routes
 
-```
-https://github.com/sanjayashwinP/Basic-Single-Page-Application-Using-React-Router
-```
+login-based access control
 
----
+smooth navigation without page reload
 
+clean UI and working authentication
+
+The aim of developing a React SPA with protected and nested routing is successfully achieved.
